@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659503E3262D6FD60094246E /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659503E2262D6FD60094246E /* CanvasView.swift */; };
+		659503E6262D704A0094246E /* ScratchPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659503E5262D704A0094246E /* ScratchPadView.swift */; };
 		65B56D0C262A028D00F44E3F /* SideBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B56D0B262A028D00F44E3F /* SideBarApp.swift */; };
 		65B56D0E262A028D00F44E3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B56D0D262A028D00F44E3F /* ContentView.swift */; };
 		65B56D10262A028F00F44E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B56D0F262A028F00F44E3F /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		659503E2262D6FD60094246E /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		659503E5262D704A0094246E /* ScratchPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchPadView.swift; sourceTree = "<group>"; };
 		65B56D08262A028D00F44E3F /* SideBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B56D0B262A028D00F44E3F /* SideBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarApp.swift; sourceTree = "<group>"; };
 		65B56D0D262A028D00F44E3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				65B56D0F262A028F00F44E3F /* Assets.xcassets */,
 				65B56D14262A028F00F44E3F /* Info.plist */,
 				65B56D11262A028F00F44E3F /* Preview Content */,
+				659503E2262D6FD60094246E /* CanvasView.swift */,
+				659503E5262D704A0094246E /* ScratchPadView.swift */,
 			);
 			path = SideBar;
 			sourceTree = "<group>";
@@ -140,6 +146,8 @@
 			files = (
 				65B56D0E262A028D00F44E3F /* ContentView.swift in Sources */,
 				65B56D0C262A028D00F44E3F /* SideBarApp.swift in Sources */,
+				659503E3262D6FD60094246E /* CanvasView.swift in Sources */,
+				659503E6262D704A0094246E /* ScratchPadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
