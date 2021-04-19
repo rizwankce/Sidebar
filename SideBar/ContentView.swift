@@ -17,42 +17,53 @@ struct ContentView: View {
     // MARK:- View
 
     var body: some View {
-        VStack {
-            HStack {
-                if !hideButton {
-                    Button(action: {
-                        toggleBackground()
-                    }) {
-                        if preferredColorScheme == .light {
-                            Image(systemName: "moon.fill")
-                                .font(.title2)
+        NavigationView {
+            VStack {
+                HStack {
+                    if !hideButton {
+                        Button(action: {
+                            toggleBackground()
+                        }) {
+                            if preferredColorScheme == .light {
+                                Image(systemName: "moon.fill")
+                                    .font(.title2)
+                            }
+                            else {
+                                Image(systemName: "sun.max.fill")
+                                    .font(.title2)
+                                    .colorInvert()
+                            }
                         }
-                        else {
-                            Image(systemName: "sun.max.fill")
-                                .font(.title2)
-                                .colorInvert()
-                        }
-                    }
 
-                    Spacer()
+                        Spacer()
+                        NavigationLink(
+                            destination: ScratchPadView(),
+                            label: {
+                                Image(systemName: "scribble")
+                                    .font(.title2)
+                            })
+                    }
+                }
+                .padding()
+                Spacer()
+            }
+            .frame(minWidth: 0,
+                   maxWidth: .infinity,
+                   minHeight: 0,
+                   maxHeight: .infinity,
+                   alignment: .topLeading
+            )
+            .contentShape(Rectangle())
+            .onTapGesture {
+                withAnimation {
+                    hideButton.toggle()
                 }
             }
-            .padding()
-            Spacer()
+            .preferredColorScheme(preferredColorScheme)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitle(Text("Home"))
+            .navigationBarHidden(true)
         }
-        .frame(minWidth: 0,
-               maxWidth: .infinity,
-               minHeight: 0,
-               maxHeight: .infinity,
-               alignment: .topLeading
-        )
-        .contentShape(Rectangle())
-        .onTapGesture {
-            withAnimation {
-                hideButton.toggle()
-            }
-        }
-        .preferredColorScheme(preferredColorScheme)
     }
 
     // MARK:- Actions
@@ -69,6 +80,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+    
+        }
     }
 }
